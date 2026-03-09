@@ -1,0 +1,60 @@
+{
+    "id": "d9ca060d-f95f-4834-87fa-58b1051f5e5d",
+    "title": "Materiality Assessment Strategy",
+    "messages": [
+        {
+            "role": "user",
+            "content": "What is the overall approach towards achieving long-term sustainability?",
+            "timestamp": 1770183582438
+        },
+        {
+            "role": "assistant",
+            "content": "Organization’s overall approach towards achieving long-term sustainability is centered on a structured materiality assessment process that aligns its sustainability strategy with corporate objectives. The company identifies and prioritizes key Environmental, Social, and Governance (ESG) topics through comprehensive stakeholder engagement across all business verticals (WTG Manufacturing, WTG Projects, WTG OMS, and SE Forge). This process is guided by the Impact Materiality Guidance of the GRI Standards 2021.\n\nBy establishing precise metrics and objectives for material ESG topics, Organization monitors progress, identifies areas for improvement, manages risks and opportunities, and aims to generate enduring value for both the company and its stakeholders. The materiality assessment includes identifying actual and potential ESG impacts on individuals, the environment, and the economy, and is periodically reviewed and approved by senior management. This approach ensures that Organization’s sustainability efforts are data-driven, stakeholder-informed, and integrated into long-term business planning.\n\nSources: [Source 1]",
+            "timestamp": 1770183596318,
+            "sources": [
+                {
+                    "id": "Source 1",
+                    "pdf": "Organization_Sustainability_Report_FY23-24",
+                    "section": "N/A",
+                    "page": 52,
+                    "type": "📄 TEXT",
+                    "score": 0.6301852673961436,
+                    "page_image_url": "https://genaiesgsa.blob.core.windows.net/Organization-documents-pdf-pages-reference-2/Organization_Sustainability_Report_FY23-24/Organization_Sustainability_Report_FY23-24_page_52.pdf"
+                }
+            ],
+            "images": []
+        },
+        {
+            "role": "user",
+            "content": "Can you share the roadmap or milestones for 2025/2030 targets?",
+            "timestamp": 1770183627994
+        },
+        {
+            "role": "assistant",
+            "content": "Organization’s roadmap and milestones for its 2025 and 2030 sustainability targets are as follows:\n\n- For 2025:\n  - Achieve 100% acceptance to the Supplier Code of Conduct.\n  - Maintain 100% coverage of trainings on anti-corruption, integrity, and ethics for employees.\n\n- For 2026:\n  - Complete Product Carbon Footprint (PCF) and Life Cycle Assessment for Wind Turbine Generators (WTGs) in manufacturing operations.\n  - Undertake human rights assessment across manufacturing operations.\n\n- For 2028:\n  - Achieve Zero Waste to Landfill (ZWTL) across operations.\n\n- For 2030:\n  - Achieve water neutrality across operations.\n  - Increase the share of women employees, including at leadership levels, to 10%.\n  - Achieve 100% renewable energy use across the business, as part of the RE100 initiative.\n\nOrganization’s decarbonization roadmap includes:\n- Short-term: Aligning with RE100 and EV100 initiatives, adopting low-carbon fuels and renewable electricity solutions, and procuring renewable energy certificates (RECs) to reduce Scope 2 emissions.\n- Mid-term: Transitioning manufacturing facilities to renewable energy sources in line with RE100 commitments.\n- Long-term: Achieving 100% renewable power across the business, supported by battery storage systems for enhanced reliability and efficiency.\n\nOrganization has also committed to 100% electric vehicle adoption by 2035 under the EV100 initiative.\n\nSources: [Source 1], [Source 2]",
+            "timestamp": 1770183640030,
+            "sources": [
+                {
+                    "id": "Source 1",
+                    "pdf": "Organization_Sustainability_Report-FY24-25",
+                    "section": "N/A",
+                    "page": 77,
+                    "type": "📄 TEXT",
+                    "score": 0.6213909476238448,
+                    "page_image_url": "https://genaiesgsa.blob.core.windows.net/Organization-documents-pdf-pages-reference-2/Organization_Sustainability_Report-FY24-25/Organization_Sustainability_Report-FY24-25_page_77.pdf"
+                },
+                {
+                    "id": "Source 2",
+                    "pdf": "Organization_Sustainability_Report_FY23-24",
+                    "section": "N/A",
+                    "page": 41,
+                    "type": "📄 TEXT",
+                    "score": 0.5986830595027153,
+                    "page_image_url": "https://genaiesgsa.blob.core.windows.net/Organization-documents-pdf-pages-reference-2/Organization_Sustainability_Report_FY23-24/Organization_Sustainability_Report_FY23-24_page_41.pdf"
+                }
+            ],
+            "images": []
+        }
+    ],
+    "createdAt": 1770183564053
+}

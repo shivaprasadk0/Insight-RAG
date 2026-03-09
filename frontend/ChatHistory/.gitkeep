@@ -1,0 +1,3 @@
+# This folder stores chat session JSON files
+# Each file is named: session_{uuid}.json
+# Delete any file to remove it from the UI

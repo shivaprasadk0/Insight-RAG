@@ -1,0 +1,300 @@
+/* ═══ Chat Window — Glassmorphism ═══ */
+
+.chatWindow {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    position: relative;
+}
+
+.chatHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.48);
+    backdrop-filter: blur(8px);
+}
+
+.chatTitle {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.chatSubtitle {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.headerActions {
+    display: flex;
+    gap: 8px;
+}
+
+.headerBtn {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--text-primary);
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.headerBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ─── Messages ─── */
+.messagesContainer {
+    flex: 1;
+    overflow-y: auto;
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ─── Welcome screen wrapper ─── */
+.welcomeWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 48px 20px 32px;
+    gap: 0;
+    min-height: 100%;
+}
+
+/* ─── Greeting block ─── */
+.greetingBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.welcomeLogo {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #0ea37f 0%, #0f6f89 100%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 16px 32px rgba(14, 163, 127, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    margin-bottom: 4px;
+}
+
+.welcomeLogoInner {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+}
+
+/* Atom Icon */
+.atomIcon {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.atomIcon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.greetingTitle {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.greetingSubtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 460px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.greetingSubtitle strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* ─── Suggestion section ─── */
+.suggestionsSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    max-width: 720px;
+}
+
+.suggestionsLabel {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0;
+}
+
+.suggestionsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+}
+
+/* ─── Individual suggestion card ─── */
+.suggestionCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 16px;
+    background: var(--bubble-ai, rgba(255, 255, 255, 0.55));
+    border: 1px solid rgba(0, 160, 100, 0.12);
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.suggestionCard:hover {
+    background: rgba(0, 160, 100, 0.07);
+    border-color: rgba(0, 160, 100, 0.35);
+    box-shadow: 0 0 0 3px rgba(0, 160, 100, 0.08), 0 2px 8px rgba(0, 160, 100, 0.1);
+    transform: translateY(-1px);
+}
+
+.suggestionIcon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background: rgba(0, 160, 100, 0.10);
+    border-radius: 6px;
+    color: var(--accent, #00a064);
+    transition: background 0.2s ease;
+    margin-top: 1px;
+}
+
+.suggestionCard:hover .suggestionIcon {
+    background: rgba(0, 160, 100, 0.18);
+}
+
+.suggestionText {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-primary);
+    font-weight: 450;
+}
+
+/* ─── Loading dots ─── */
+.loadingBubble {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 14px 18px;
+    background: var(--bubble-ai);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: var(--radius-md);
+    border-top-left-radius: 4px;
+    align-self: flex-start;
+    width: fit-content;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    animation: fadeInUp 0.3s var(--ease);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent-light);
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+}
+
+.suggestionBadge {
+    min-width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: #0c5c46;
+    background: linear-gradient(145deg, rgba(13, 161, 140, 0.2), rgba(13, 161, 140, 0.08));
+    border: 1px solid rgba(13, 161, 140, 0.35);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.userQuestionText {
+    white-space: pre-wrap;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.messageMetaRow {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.metaActionBtn {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--text-secondary);
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}

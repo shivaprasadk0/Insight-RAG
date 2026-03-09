@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+openai
+bcrypt
+PyMySQL
+tiktoken
+azure-core
+azure-ai-documentintelligence
+azure-search-documents
+PyMuPDF
+langchain-core
+tqdm
+locust

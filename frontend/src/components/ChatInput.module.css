@@ -1,0 +1,90 @@
+/* ═══ Chat Input — Floating glass bar ═══ */
+
+.chatInputWrapper {
+    padding: 12px 32px 20px;
+    position: relative;
+}
+
+.chatInput {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    padding: 10px 14px;
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.60);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all var(--dur) var(--ease);
+}
+
+.chatInput:focus-within {
+    border-color: rgba(123, 111, 222, 0.25);
+    box-shadow: 0 4px 24px rgba(123, 111, 222, 0.08);
+}
+
+.input {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-family: inherit;
+    resize: none;
+    min-height: 44px;
+    max-height: 150px;
+    background: transparent;
+    color: var(--text-primary);
+    outline: none;
+    line-height: 1.5;
+}
+
+.input::placeholder {
+    color: var(--text-muted);
+}
+
+.input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ─── Send button ─── */
+.sendButton {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(123, 111, 222, 0.12);
+    color: var(--accent);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--dur) var(--ease);
+    flex-shrink: 0;
+    position: relative;
+}
+
+.sendButton:hover:not(:disabled) {
+    background: var(--accent-gradient);
+    color: white;
+    box-shadow: 0 4px 16px rgba(123, 111, 222, 0.3);
+    transform: scale(1.05);
+}
+
+.sendButton:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.sendButton:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.sendIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

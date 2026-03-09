@@ -1,0 +1,433 @@
+/* ═══ Message Bubble — Glass style ═══ */
+
+/* Table styling */
+.content table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.content table th,
+.content table td {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.content table th {
+    background: rgba(123, 111, 222, 0.06);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.content table tr:hover {
+    background: rgba(0, 0, 0, 0.015);
+}
+
+/* ─── Bubble wrapper ─── */
+.messageBubble {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    max-width: 85%;
+    animation: fadeInUp 0.35s var(--ease);
+}
+
+.user {
+    margin-left: auto;
+    flex-direction: row-reverse;
+}
+
+.assistant {
+    margin-right: auto;
+}
+
+/* ─── Avatar ─── */
+.avatar {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.user .avatar {
+    background: rgba(236, 232, 245, 0.6);
+}
+
+.assistant .avatar {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* ─── Message content ─── */
+.messageContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.content {
+    padding: 16px;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    word-wrap: break-word;
+}
+
+/* AI bubble */
+.assistant .content {
+    background: var(--bubble-ai);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    border-top-left-radius: 4px;
+}
+
+/* User bubble */
+.user .content {
+    background: var(--bubble-user);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(236, 232, 245, 0.5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    border-top-right-radius: 4px;
+}
+
+/* Markdown formatting */
+.content strong {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.content em {
+    font-style: italic;
+}
+
+.content code {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.content pre {
+    background: #2D2A33;
+    color: #f0ede8;
+    padding: 14px;
+    border-radius: var(--radius-sm);
+    overflow-x: auto;
+    margin: 0.3em 0;
+}
+
+.content pre code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+/* ─── Images Container ─── */
+.imagesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.imageWrapper {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: var(--radius-md);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.imagePreview {
+    position: relative;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    max-width: 300px;
+    transition: max-width 0.3s ease;
+}
+
+.imagePreview.expanded {
+    max-width: 100%;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.2s;
+}
+
+.imagePreview:hover .image {
+    transform: scale(1.02);
+}
+
+.expandHint {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    color: white;
+    padding: 8px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.imageCaption {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-style: italic;
+    padding: 6px 10px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 6px;
+    border-left: 3px solid var(--accent-light);
+}
+
+.imageSummary {
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding: 8px;
+    background: rgba(123, 111, 222, 0.04);
+    border-radius: 6px;
+    line-height: 1.5;
+}
+
+/* ─── Sources + Feedback Row ─── */
+.sourcesAndFeedbackRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+}
+
+.sourcesButton {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: var(--radius-sm);
+    padding: 8px 14px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all var(--dur) var(--ease);
+    font-family: inherit;
+}
+
+.sourcesButton:hover {
+    background: rgba(255, 255, 255, 0.6);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.arrow {
+    font-size: 10px;
+    margin-left: auto;
+}
+
+.sourcesList {
+    margin-top: 8px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sourceItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-light);
+    transition: all var(--dur) var(--ease);
+    border: 1px solid transparent;
+}
+
+.sourceItem.clickable {
+    cursor: pointer;
+}
+
+.sourceItem.clickable:hover {
+    background: rgba(123, 111, 222, 0.06);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border-color: rgba(123, 111, 222, 0.12);
+}
+
+.sourceType {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.sourcePdf {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.sourceDetails {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.timestamp {
+    font-size: 11px;
+    color: var(--text-muted);
+    padding-left: 4px;
+    align-self: flex-start;
+}
+
+.user .timestamp {
+    align-self: flex-end;
+}
+
+/* ═══ Feedback System ═══ */
+.feedbackSection {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    position: relative;
+}
+
+.starRow {
+    display: flex;
+    gap: 4px;
+}
+
+.star {
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.15s var(--ease);
+    filter: grayscale(1) opacity(0.35);
+    user-select: none;
+    line-height: 1;
+}
+
+.star:hover {
+    transform: scale(1.2);
+    filter: grayscale(0) opacity(1);
+}
+
+.star.filled {
+    filter: grayscale(0) opacity(1);
+    animation: starPop 0.25s var(--ease);
+}
+
+@keyframes starPop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.commentToggle {
+    font-size: 12px;
+    color: var(--accent);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 2px 0;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.commentToggle:hover {
+    text-decoration: underline;
+}
+
+.commentBox {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 6px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    animation: fadeInUp 0.2s var(--ease);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius-pill);
+    padding: 6px 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    min-width: 240px;
+}
+
+.commentInput {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius-pill);
+    font-size: 12px;
+    font-family: inherit;
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--text-primary);
+    outline: none;
+}
+
+.commentInput:focus {
+    border-color: var(--accent-light);
+}
+
+.commentSubmit {
+    padding: 6px 16px;
+    border: none;
+    border-radius: var(--radius-pill);
+    background: var(--accent-gradient);
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--dur) var(--ease);
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+.commentSubmit:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 2px 10px rgba(123, 111, 222, 0.25);
+}
+
+.feedbackDone {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-style: italic;
+}

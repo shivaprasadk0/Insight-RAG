@@ -1,0 +1,19 @@
+{
+    "id": "151fb502-5037-438b-ac1a-e7c6ab1488f2",
+    "title": "Organization Energy Governance Overview",
+    "messages": [
+        {
+            "role": "user",
+            "content": "hello, good morning",
+            "timestamp": 1770183532281
+        },
+        {
+            "role": "assistant",
+            "content": "Good morning. I am a Corporate Intelligence Assistant focused on Organization Energy Limited’s official disclosures and policies.",
+            "timestamp": 1770183535534,
+            "sources": [],
+            "images": []
+        }
+    ],
+    "createdAt": 1770183525517
+}

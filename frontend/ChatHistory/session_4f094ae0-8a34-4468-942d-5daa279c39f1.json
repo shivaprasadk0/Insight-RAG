@@ -1,0 +1,38 @@
+{
+    "id": "4f094ae0-8a34-4468-942d-5daa279c39f1",
+    "title": "Sustainability Governance Framework",
+    "messages": [
+        {
+            "role": "user",
+            "content": "What is the overall approach towards achieving long-term sustainability?",
+            "timestamp": 1770183983024
+        },
+        {
+            "role": "assistant",
+            "content": "Organization’s overall approach towards achieving long-term sustainability is anchored in a structured, integrated framework that combines materiality assessment, robust governance, and stakeholder engagement. The company conducts regular materiality assessments, following the GRI Standards 2021, to identify and prioritize key Environmental, Social, and Governance (ESG) topics that have significant positive or negative impacts. This process involves all four business verticals and uses stakeholder consultation to ensure alignment with both business objectives and stakeholder expectations.\n\nSustainability governance is embedded at the highest organizational level, with the CSR & ESG Board Committee providing strategic oversight and reporting directly to the Board. The Chairman & Managing Director and Group CEO set the strategic direction, while the Sustainability & ESG Head, Business Vertical CEOs, and dedicated Sustainability Leads ensure integration of sustainability strategy into operations. Sustainability Champions at operational locations translate strategy into action and address on-site challenges.\n\nThis integrated approach enables Organization to establish clear metrics and targets, monitor progress, manage risks and opportunities, and create enduring value for the company and its stakeholders.\n\nSources: [Source 1], [Source 2]",
+            "timestamp": 1770183991851,
+            "sources": [
+                {
+                    "id": "Source 1",
+                    "pdf": "Organization_Sustainability_Report_FY23-24",
+                    "section": "N/A",
+                    "page": 52,
+                    "type": "📄 TEXT",
+                    "score": 0.6265723816464984,
+                    "page_image_url": "https://genaiesgsa.blob.core.windows.net/Organization-documents-pdf-pages-reference-2/Organization_Sustainability_Report_FY23-24/Organization_Sustainability_Report_FY23-24_page_52.pdf"
+                },
+                {
+                    "id": "Source 2",
+                    "pdf": "Organization_Sustainability_Report-FY24-25",
+                    "section": "N/A",
+                    "page": 23,
+                    "type": "📄 TEXT",
+                    "score": 0.6080288639748139,
+                    "page_image_url": "https://genaiesgsa.blob.core.windows.net/Organization-documents-pdf-pages-reference-2/Organization_Sustainability_Report-FY24-25/Organization_Sustainability_Report-FY24-25_page_23.pdf"
+                }
+            ],
+            "images": []
+        }
+    ],
+    "createdAt": 1770183981857
+}
